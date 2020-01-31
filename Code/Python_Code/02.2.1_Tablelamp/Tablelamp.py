@@ -33,6 +33,8 @@ def loop():
         pass
                 
 def destroy():
+    if ledState :
+       GPIO.output(ledPin,GPIO.LOW)
     GPIO.cleanup()                     # Release GPIO resource
 
 if __name__ == '__main__':     # Program entrance
